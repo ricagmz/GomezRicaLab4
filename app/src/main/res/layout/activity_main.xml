@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="395dp"
+        android:layout_height="276dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/coron" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="395dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            style="@style/title"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="CORON" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="395dp"
+        android:layout_height="148dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/desc"
+            android:layout_width="357dp"
+            android:layout_height="39dp"
+            android:layout_above="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-1dp"
+            android:gravity="left"
+            android:text="Location: Two Seasons Coron Bayside" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/desc"
+            android:layout_width="356dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="34dp"
+            android:gravity="left"
+            android:text="Distance from UST: 447.6 km" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/button"
+        android:layout_width="112dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="showNext"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/button"
+        android:layout_width="105dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="32dp"
+        android:onClick="showBack"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
